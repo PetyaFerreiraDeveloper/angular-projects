@@ -41,15 +41,21 @@ export class HeroService {
   }
 
   getHeroes(): Observable<IHero[]> {
-    return this.http
-      .get<IHero[]>(this.heroesUrl)
-      .pipe(catchError(this.handleError<IHero[]>('get heroes', [])));
+    return this.http.get<IHero[]>(this.heroesUrl)
+      .pipe(
+        tap(_ => this.log('fetched heroes')),
+        catchError(this.handleError<IHero[]>('getHeroes', []))
+      );
   }
 
+  /** GET hero by id. Will 404 if id not found */
   getHero(id: number): Observable<IHero> {
-    const hero = HEROES.find((h) => h.id === id)!;
-    this.messageService.add(`HeroService: fetched hero id=${id}`);
-    return of(hero);
+    const url = `${this.heroesUrl}/${id}`;
+    return this.http.get<IHero>(url)
+      .pipe(
+        tap(_ => this.log(`fetched hero id=${id}`)),
+        catchError(this.handleError<IHero>(`getHero id=${id}`))
+      );
   }
 
   private log(message: string) {
