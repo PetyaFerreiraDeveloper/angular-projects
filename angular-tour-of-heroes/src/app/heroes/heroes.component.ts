@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { IHero } from '../types/hero';
 import { HeroService } from '../hero.service';
-import { MessageService } from '../message.service';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -11,7 +10,7 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit {
   heroes: IHero[] = [];
 
-  constructor(private heroService: HeroService, private messageService: MessageService) { }
+  constructor(private heroService: HeroService) { }
   
   ngOnInit(): void {
     this.getHeroes();

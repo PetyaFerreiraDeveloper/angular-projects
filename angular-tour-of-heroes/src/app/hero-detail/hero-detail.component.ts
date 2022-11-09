@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { IHero } from '../types/hero';
-
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+
+import { IHero } from '../types/hero';
 import { HeroService } from '../hero.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
 
-  @Input() hero?: IHero;
+  hero: IHero | undefined;
 
   constructor(
     private route: ActivatedRoute,
