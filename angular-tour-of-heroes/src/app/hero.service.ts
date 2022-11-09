@@ -77,6 +77,17 @@ export class HeroService {
       );
   }
 
+  /** DELETE: delete the hero from the server */
+  deleteHero(id: number): Observable<IHero> {
+    const url = `${this.heroesUrl}/${id}`;
+    return this.http.delete<IHero>(url, this.httpOptions)
+      .pipe(
+        tap(_ => this.log(`deleted hero id=${id}`)),
+        catchError(this.handleError<IHero>('deleteHero'))
+      );
+  }
+
+
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
