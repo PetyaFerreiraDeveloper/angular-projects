@@ -3,61 +3,50 @@
     flex-direction: column;
     width: 140px;
     height: 250px;
-    background-color: #29394b;
     border: 2px solid;
+    background-color: #29394b;
     padding: 10px;
     color: #bdc2c5;
     margin: 0 12px 12px 0;
-}
-
-h2 {
+  }
+  h2 {
     font-size: 1.6em;
     flex: 1;
-}
-
-:host(.medium-movies) {
+  }
+  :host(.medium-movies) {
     border-color: #53ace4;
-}
-
-:host(.medium-movies)>h2 {
+  }
+  :host(.medium-movies) > h2 {
     color: #53ace4;
-}
-
-:host(.medium-series) {
+  }
+  :host(.medium-series) {
     border-color: #45bf94;
-}
-
-:host(.medium-series)>h2 {
+  }
+  :host(.medium-series) > h2 {
     color: #45bf94;
-}
-
-.tools {
+  }
+  .tools {
     margin-top: 8px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
-
-.favorite {
+  }
+  .favorite {
     width: 24px;
     height: 24px;
     fill: #bdc2c5;
     cursor: pointer;
-}
-
-.favorite.is-favorite {
-    fill: #37ad79;
-}
-
-.favorite.is-favorite-hovering {
-    fill: #45bf94;
-}
-
-.favorite.is-favorite.is-favorite-hovering {
-    fill: #ec4342;
-}
-
-.delete {
+  }
+  .favorite.is-favorite {
+      fill: #37ad79;
+  }
+  .favorite.is-favorite-hovering {
+      fill: #45bf94;
+  }
+  .favorite.is-favorite.is-favorite-hovering {
+      fill: #ec4342;
+  }
+  .delete {
     display: block;
     background-color: #ec4342;
     padding: 4px;
@@ -65,9 +54,8 @@ h2 {
     border-radius: 4px;
     color: #ffffff;
     cursor: pointer;
-}
-
-.details {
+  }
+  .details {
     display: block;
     background-color: #37ad79;
     padding: 4px;
@@ -75,4 +63,4 @@ h2 {
     border-radius: 4px;
     color: #ffffff;
     text-decoration: none;
-}
+  }
