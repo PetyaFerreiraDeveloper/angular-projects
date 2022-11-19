@@ -1,6 +1,9 @@
 # AngularEssentialTraining
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+Github repo:
+https://github.com/coursefiles/angular-essential-training/blob/05_04b/src/app/media-item-form.component.ts
+
 
 ## Development server
 
